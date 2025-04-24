@@ -70,7 +70,6 @@ To foster a self-sustaining freelance community where users swap skills, help ea
 
 ---
 
-
 ## Day by day Progress:
 
 DAY 1: Created a low fidelity design for the whole project.
@@ -82,3 +81,6 @@ DAY 3: Initialized the Git repository with all the necessary information in the 
 DAY 4: Created issues in the github repository so that I can work on them each per day.
 
 DAY 5: Created backend folder structure and basic server using Express.
+
+DAY 6: Created frontend folder using react.js.
+
