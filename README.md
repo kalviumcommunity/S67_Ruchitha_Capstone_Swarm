@@ -83,3 +83,4 @@ DAY 4: Created issues in the github repository so that I can work on them each p
 DAY 5: Created backend folder structure and basic server using Express.
 
 DAY 6: Created frontend folder using react.js.
+
