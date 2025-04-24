@@ -69,3 +69,10 @@ To foster a self-sustaining freelance community where users swap skills, help ea
   - Optimized for mobile, tablet, and desktop
 
 ---
+
+Day by day Progress:
+DAY 1: Created a low fidelity design for the whole project.
+
+DAY 2: Created a high fidelity design for the whole project.
+
+DAY 3: Initialized the Git repository with all the necessary information in the README.md file.
