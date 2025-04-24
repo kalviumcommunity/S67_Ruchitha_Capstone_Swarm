@@ -70,6 +70,7 @@ To foster a self-sustaining freelance community where users swap skills, help ea
 
 ---
 
+
 ## Day by day Progress:
 
 DAY 1: Created a low fidelity design for the whole project.
