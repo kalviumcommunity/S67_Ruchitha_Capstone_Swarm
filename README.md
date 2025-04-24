@@ -105,3 +105,9 @@ To foster a self-sustaining freelance community where users swap skills, help ea
 - [ ] Fix bugs, polish UI, prepare for deployment
 
 ---
+
+
+
+## **Basic Server Setup & Deployment**
+
+This is the initial backend setup using Node.js and Express.js. A simple server with a root route is created to ensure the server runs correctly. The backend is deployed using Render, making it live and ready for future development and API integration.
