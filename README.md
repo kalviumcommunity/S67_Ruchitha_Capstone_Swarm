@@ -110,10 +110,16 @@ To foster a self-sustaining freelance community where users swap skills, help ea
 
 ---
 
+## Day by day Progress:
 
+DAY 1: Created a low fidelity design for the whole project.
 
-## **Basic Server Setup & Deployment**
+DAY 2: Created a high fidelity design for the whole project.
 
-This is the initial backend setup using Node.js and Express.js. A simple server with a root route is created to ensure the server runs correctly. The backend is deployed using Render, making it live and ready for future development and API integration.
+DAY 3: Initialized the Git repository with all the necessary information in the README.md file.
 
-*[Backend Deployment](https://s67-ruchitha-capstone-swarm-8.onrender.com/)*
+DAY 4: Created issues in the github repository so that I can work on them each per day.
+
+DAY 5: Created backend folder structure and basic server using Express.
+
+DAY 6: Created frontend folder using react.js.
