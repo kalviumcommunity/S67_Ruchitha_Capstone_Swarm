@@ -19,9 +19,28 @@ To foster a self-sustaining freelance community where users swap skills, help ea
 
 ## 🛠️ Tech Stack
 
-| Frontend   | Backend  | Database | Styling      | Utilities                     |
-|------------|----------|----------|--------------|-------------------------------|
-| React.js   | Node.js  | MongoDB  | Tailwind CSS | react-icons, React Router     |
+### Frontend
+- **React.js** – Component-based UI development  
+- **Tailwind CSS** – Utility-first styling framework  
+- **Axios** – HTTP client for API calls  
+- **React Router** – For routing and navigation  
+
+### Backend
+- **Node.js** – Runtime environment  
+- **Express.js** – Web framework for building RESTful APIs  
+- **Mongoose** – ODM for MongoDB  
+- **JWT (jsonwebtoken)** – Authentication using JSON Web Tokens  
+- **Cookie-Parser** – For reading JWTs from cookies  
+
+### Database
+- **MongoDB** – NoSQL document database  
+- **MongoDB Atlas** – Cloud-based database hosting  
+
+### Dev Tools
+- **Bruno** – API testing (alternative to Postman)   
+- **Dotenv** – Environment variable management  
+- **Git & GitHub** – Version control and code hosting  
+- **VS Code** – Code editor  
 
 ---
 
