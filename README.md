@@ -5,6 +5,7 @@ Welcome to SWARM — a peer-powered platform where individuals connect through s
 *[GitHub Repository](https://github.com/kalviumcommunity/S67_Ruchitha_Capstone_Swarm)* |
 *[Low Fidelity Figma Design](https://www.figma.com/design/ZEtwQ4HbprBgdf45YPdcnt/low-fid?node-id=0-1&t=56D7jSCs6yV0IXTl-1)* |
 *[Backend Deployment](https://s67-ruchitha-capstone-swarm-8.onrender.com/)*
+*[Frontend Deployment](https://swarm-gamma.vercel.app/)*
 
 ---
 
