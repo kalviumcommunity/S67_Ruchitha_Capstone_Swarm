@@ -80,7 +80,8 @@ DAY 3: Initialized the Git repository with all the necessary information in the 
 
 DAY 4: Created issues in the github repository so that I can work on them each per day.
 
-DAY 5: Created backend folder structure and basic server using Express.
+DAY 5: Created backend folder structure and basic server using Express and deployed using RENDER.
 
 DAY 6: Created frontend folder using react.js.
 
+DAY 7: Created Landing page, Header and Footer in frontend and deployed using VERCEL.
