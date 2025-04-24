@@ -1,6 +1,10 @@
 # Swarm - Freelance Help Platform
 
-> A peer-to-peer freelance help platform where users collaborate, swap skills, showcase experience, and earn points within a growing community.
+Welcome to SWARM — a peer-powered platform where individuals connect through shared passions. Whether you're seeking help, offering support, or building meaningful discussions, this is your space to collaborate, create, and grow together.
+
+*[GitHub Repository](https://github.com/kalviumcommunity/S67_Ruchitha_Capstone_Swarm)* |
+*[Low Fidelity Figma Design](https://www.figma.com/design/ZEtwQ4HbprBgdf45YPdcnt/low-fid?node-id=0-1&t=56D7jSCs6yV0IXTl-1)* |
+*[Backend Deployment](https://s67-ruchitha-capstone-swarm-8.onrender.com/)*
 
 ---
 
