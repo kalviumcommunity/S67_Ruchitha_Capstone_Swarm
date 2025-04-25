@@ -86,3 +86,5 @@ DAY 5: Created backend folder structure and basic server using Express and deplo
 DAY 6: Created frontend folder using react.js.
 
 DAY 7: Created Landing page, Header and Footer in frontend and deployed using VERCEL.
+
+DAY 8: Connected database to the server using Mongoose and created User model.
