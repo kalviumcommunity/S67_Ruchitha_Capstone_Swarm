@@ -90,7 +90,6 @@ const questionSchema = new Schema({
 
   filterOptions: {
     type: String,
-    required: true,
     enum: ['Recent', 'Popular', 'Unanswered']
   }
 

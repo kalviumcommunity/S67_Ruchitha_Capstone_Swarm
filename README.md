@@ -94,3 +94,5 @@ DAY 9: Hashing the password and verifying it by using Bcrypt and Jsonwebtoken.
 Day 10: Implemented the relation between entities in database using Mongoose.
 
 DAY 11: Created authentication middleware and worked on the PR review from DAY 10.
+
+DAY 12: Created POST api for posing a question and worked on DAY 11 issues.

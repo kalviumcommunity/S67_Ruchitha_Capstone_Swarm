@@ -5,7 +5,7 @@ require('dotenv').config();
 const auth = async (req, res, next) => {
   try {
     if (!process.env.SECRET) {
-        res.status(401).json({ message: "SECRET is missing" });
+        return res.status(401).json({ message: "SECRET is missing" });
     }
 
     const authHeader = req.headers.authorization;
@@ -20,7 +20,6 @@ const auth = async (req, res, next) => {
 
     const decoded = jwt.verify(token, process.env.SECRET);
     console.log("Token verified");
-
     
     const user = await User.findById(decoded.id);
     if (!user) {

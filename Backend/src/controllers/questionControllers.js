@@ -1,3 +1,4 @@
+
 const { mongoose } = require("mongoose");
 const Question = require("../models/Question");
 
@@ -13,6 +14,7 @@ const postQuestion = async (req, res) => {
         const question = await Question.create({ 
             title, 
             description, 
+
             tags: tags.split(',').map(tag => tag.trim().toLowerCase()),
             createdBy: existingUser._id
         });
