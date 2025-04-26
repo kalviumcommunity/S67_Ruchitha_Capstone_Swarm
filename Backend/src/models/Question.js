@@ -47,7 +47,7 @@ const answerSchema = new Schema({
 
 const questionSchema = new Schema({
 
-  user: {
+  createdBy: {
     type: Schema.Types.ObjectId,
     ref: 'User',
     required: true,

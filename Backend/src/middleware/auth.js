@@ -1,8 +1,6 @@
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
-require('dotenv').config({
-    path: './src/config/.env'
-});
+require('dotenv').config();
 
 const auth = async (req, res, next) => {
   try {
@@ -21,7 +19,7 @@ const auth = async (req, res, next) => {
     }
 
     const decoded = jwt.verify(token, process.env.SECRET);
-    console.log("Token verified:", decoded);
+    console.log("Token verified");
 
     
     const user = await User.findById(decoded.id);
@@ -30,6 +28,7 @@ const auth = async (req, res, next) => {
     }
 
     req.user = user;
+    req.userId = user._id;
     next();
   } catch (err) {
     console.log("error in auth middleware", err);
