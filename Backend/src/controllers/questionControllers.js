@@ -1,5 +1,5 @@
 
-const { mongoose } = require("mongoose");
+const mongoose = require("mongoose");
 const Question = require("../models/Question");
 
 const postQuestion = async (req, res) => {
@@ -14,9 +14,8 @@ const postQuestion = async (req, res) => {
         const question = await Question.create({ 
             title, 
             description, 
-
             tags: tags.split(',').map(tag => tag.trim().toLowerCase()),
-            createdBy: existingUser._id
+            createdBy: userId
         });
 
         console.log(question);
@@ -24,7 +23,7 @@ const postQuestion = async (req, res) => {
     }
     catch(err){
         console.log("error in posting a question", err);
-        res.status(500).json({ message: "Internal server error", err});
+        res.status(500).json({ message: "Internal server error"});
     }
 };
 
@@ -36,7 +35,7 @@ const getQuestions = async (req, res) => {
     }
     catch(err){
         console.log("error in getting questions", err);
-        res.status(500).json({ message: "Internal server error", err});
+        res.status(500).json({ message: "Internal server error"});
     }
 };
 
@@ -56,7 +55,7 @@ const getQuestion = async (req, res) => {
     }
     catch(err){
         console.log("error in getting question", err);
-        res.status(500).json({ message: "Internal server error", err});
+        res.status(500).json({ message: "Internal server error"});
     }
 };
 
