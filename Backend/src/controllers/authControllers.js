@@ -3,6 +3,14 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 require('dotenv').config();
 
+
+const ensureUserAuthenticated = (req, res) => {
+    if (!req.userId) {
+        return res.status(401).json({ message: "Unauthorized: userId not found" });
+    }
+};
+
+
 const signup = async (req, res) => {
     try{
         const { username, email, password } = req.body;
@@ -40,7 +48,7 @@ const signup = async (req, res) => {
         });
     }
     catch(err){
-        console.log(err);
+        console.error("signup err",err);
         res.status(500).json({ message: "Internal Server Error" }, err);
     }
 };
@@ -88,10 +96,16 @@ const login = async (req, res) => {
 
 const updateUser = async (req, res) => {
     try{
+        ensureUserAuthenticated(req, res);
         const userId = req.userId;
+
         const { username, email } = req.body;
-        if(!username || !email){
-            return res.status(400).json({ message: "All fields are required" });
+        if(email){
+            return res.status(400).json({ message: "email cannot be changed" });
+        }
+
+        if (!username) {
+            return res.status(400).json({ message: "Username is required" });
         }
 
         const user = await User.findById(userId);
@@ -99,8 +113,8 @@ const updateUser = async (req, res) => {
             return res.status(404).json({ message: "User not found" });
         }
 
-        user.username = username;
-        user.email = email;
+        if (username) user.username = username;
+        
         const updatedUser = await user.save();
 
         res.status(200).json({ message: "User updated successfully", 
@@ -112,8 +126,8 @@ const updateUser = async (req, res) => {
             }});
     }
     catch(err){
-        console.log("error in updating user", err);
-        res.status(500).json({ message: "Internal server error"});
+        console.error("error in updating user", err);
+        res.status(500).json({ message: "Internal server error", err});
     }
 };
 

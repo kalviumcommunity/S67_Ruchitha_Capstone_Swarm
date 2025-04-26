@@ -18,11 +18,11 @@ const postQuestion = async (req, res) => {
             createdBy: userId
         });
 
-        console.log(question);
+        console.lerror(question);
         res.status(201).json({ message: "Question posted successfully", question });
     }
     catch(err){
-        console.log("error in posting a question", err);
+        console.error("error in posting a question", err);
         res.status(500).json({ message: "Internal server error"});
     }
 };
@@ -34,7 +34,7 @@ const getQuestions = async (req, res) => {
         res.status(200).json({ message: "Questions fetched successfully", questions });
     }
     catch(err){
-        console.log("error in getting questions", err);
+        console.error("error in getting questions", err);
         res.status(500).json({ message: "Internal server error"});
     }
 };
@@ -54,7 +54,7 @@ const getQuestion = async (req, res) => {
         res.status(200).json({ message: "Question fetched successfully", question });
     }
     catch(err){
-        console.log("error in getting question", err);
+        console.error("error in getting question", err);
         res.status(500).json({ message: "Internal server error"});
     }
 };
