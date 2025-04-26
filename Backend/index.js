@@ -2,10 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./src/database/db');
 const authRouter = require('./src/routers/authRoutes');
+const questionRouter = require('./src/routers/questionRoutes');
 const app = express();
-require('dotenv').config({
-    path: './src/config/.env'
-});
+require('dotenv').config();
 
 app.use(express.json());
 app.use(cors());
@@ -23,6 +22,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/auth', authRouter);
+app.use('/questions', questionRouter);
 
 app.listen(PORT, async() => {
     try{
