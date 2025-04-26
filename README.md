@@ -98,3 +98,5 @@ DAY 11: Created authentication middleware and worked on the PR review from DAY 1
 DAY 12: Created POST api for posing a question and worked on DAY 11 issues.
 
 DAY 13: Created GET api for getting all question and also question by id, and worked on the codiumAI review.
+
+DAY 14: Created PUT api for updating username and corrected the issues given by codiumAI.
