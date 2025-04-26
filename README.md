@@ -92,3 +92,5 @@ DAY 8: Connected database to the server using Mongoose and created User model.
 DAY 9: Hashing the password and verifying it by using Bcrypt and Jsonwebtoken.
 
 Day 10: Implemented the relation between entities in database using Mongoose.
+
+DAY 11: Created authentication middleware and worked on the PR review from DAY 10.

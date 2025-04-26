@@ -12,11 +12,6 @@ const commentSchema = new Schema({
   commentText: {
     type: String,
     required: true,
-  },
-
-  createdAt: {
-    type: Date,
-    default: Date.now
   }
 
 }, { timestamps: true });
@@ -44,11 +39,6 @@ const answerSchema = new Schema({
   isAccepted: {
     type: Boolean, 
     default: false 
-  },
-
-  createdAt: {
-    type: Date,
-    default: Date.now
   }
 
 }, { timestamps: true });
@@ -98,15 +88,10 @@ const questionSchema = new Schema({
     default: false
   },
 
-  category: {
+  filterOptions: {
     type: String,
     required: true,
-    enum: ['All Categories', 'Recent', 'Popular', 'Helpful', 'Unanswered']
-  },
-
-  createdAt: {
-    type: Date,
-    default: Date.now
+    enum: ['Recent', 'Popular', 'Unanswered']
   }
 
 }, { timestamps: true });
