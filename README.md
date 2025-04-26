@@ -89,4 +89,6 @@ DAY 7: Created Landing page, Header and Footer in frontend and deployed using VE
 
 DAY 8: Connected database to the server using Mongoose and created User model.
 
-DAY 9: hashing the password and verifying it by using Bcrypt and Jsonwebtoken.
+DAY 9: Hashing the password and verifying it by using Bcrypt and Jsonwebtoken.
+
+Day 10: Implemented the relation between entities in database using Mongoose.
