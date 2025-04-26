@@ -19,8 +19,7 @@ const auth = async (req, res, next) => {
     }
 
     const decoded = jwt.verify(token, process.env.SECRET);
-    console.log("Token verified:");
-
+    console.log("Token verified");
     
     const user = await User.findById(decoded.id);
     if (!user) {
@@ -28,6 +27,7 @@ const auth = async (req, res, next) => {
     }
 
     req.user = user;
+    req.userId = user._id;
     next();
   } catch (err) {
     console.log("error in auth middleware", err);

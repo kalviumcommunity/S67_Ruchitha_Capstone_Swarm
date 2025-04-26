@@ -1,9 +1,13 @@
 const { Router } = require("express");
-const { postQuestion } = require("../controllers/questionControllers");
+const { postQuestion, getQuestions, getQuestion } = require("../controllers/questionControllers");
 const auth = require("../middleware/auth");
 
 const questionRouter = Router();
 
-questionRouter.post('/post-question', auth, postQuestion);
+questionRouter.post('/', auth, postQuestion);
+
+questionRouter.get('/', getQuestions);
+
+questionRouter.get('/:id', getQuestion);
 
 module.exports = questionRouter;
