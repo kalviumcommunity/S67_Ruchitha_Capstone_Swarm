@@ -23,7 +23,7 @@ const postQuestion = async (req, res) => {
     }
     catch(err){
         console.error("error in posting a question", err);
-        res.status(500).json({ message: "Internal server error"});
+        res.status(500).json({ message: "Internal Server Error"});
     }
 };
 
@@ -35,7 +35,7 @@ const getQuestions = async (req, res) => {
     }
     catch(err){
         console.error("error in getting questions", err);
-        res.status(500).json({ message: "Internal server error"});
+        res.status(500).json({ message: "Internal Server Error"});
     }
 };
 
@@ -55,7 +55,7 @@ const getQuestion = async (req, res) => {
     }
     catch(err){
         console.error("error in getting question", err);
-        res.status(500).json({ message: "Internal server error"});
+        res.status(500).json({ message: "Internal Server Error"});
     }
 };
 
