@@ -100,3 +100,5 @@ DAY 12: Created POST api for posing a question and worked on DAY 11 issues.
 DAY 13: Created GET api for getting all question and also question by id, and worked on the codiumAI review.
 
 DAY 14: Created PUT api for updating username and corrected the issues given by codiumAI.
+
+DAY 15: Implemented file upload functionality in the application using Multer and Cloudinary.
