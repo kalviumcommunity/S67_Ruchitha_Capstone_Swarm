@@ -49,7 +49,7 @@ const signup = async (req, res) => {
     }
     catch(err){
         console.error("signup err",err);
-        res.status(500).json({ message: "Internal Server Error" }, err);
+        res.status(500).json({ message: "Internal Server Error" });
     }
 };
 
@@ -90,7 +90,7 @@ const login = async (req, res) => {
 
     } catch (err) {
         console.error('Login error:', err);
-        res.status(500).json({ message: "Internal Server Error", err});
+        res.status(500).json({ message: "Internal Server Error"});
     }
 };
 
@@ -98,36 +98,45 @@ const updateUser = async (req, res) => {
     try{
         ensureUserAuthenticated(req, res);
         const userId = req.userId;
+        const updates = {};
 
         const { username, email } = req.body;
         if(email){
             return res.status(400).json({ message: "email cannot be changed" });
         }
-
-        if (!username) {
-            return res.status(400).json({ message: "Username is required" });
+        if (username) {
+            updates.username = username;
+        }
+        if(req.file){
+            updates.profileImage = req.file.path;
         }
 
-        const user = await User.findById(userId);
-        if(!user){
+        if(Object.keys(updates).length === 0){
+            return res.status(400).json({ message: "No updates provided" });
+        }
+
+        const updateUser = await User.findByIdAndUpdate(
+            userId,
+            { $set: updates },
+            { new: true }
+        );
+        if(!updateUser){
             return res.status(404).json({ message: "User not found" });
         }
-
-        if (username) user.username = username;
-        
-        const updatedUser = await user.save();
 
         res.status(200).json({ message: "User updated successfully", 
             success: true,
             user: {
-                _id: updatedUser._id,
-                username: updatedUser.username,
-                email: updatedUser.email
-            }});
+                _id: updateUser._id,
+                username: updateUser.username,
+                email: updateUser.email,
+                profileImage: updateUser.profileImage
+            }
+        });
     }
     catch(err){
         console.error("error in updating user", err);
-        res.status(500).json({ message: "Internal server error", err});
+        res.status(500).json({ message: "Internal server error"});
     }
 };
 
